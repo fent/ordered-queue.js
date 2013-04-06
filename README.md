@@ -7,11 +7,10 @@ Queue with concurrency that starts tasks in order and runs them in parallel.
 
 ```js
 var OrderedQueue = require('ordered-queue');
-var concurrency = 5;
 var q = new OrderedQueue(function worker(str, callback) {
   console.log(str);
   callback();
-}, concurrency);
+}, { concurrency: 10 });
 
 q.push(3, 'fox');
 q.push(1, 'quick');
@@ -30,37 +29,13 @@ q.push(2, 'brown');
 
 # API
 
-### new OrderedQueue(worker, concurrency)
+### new OrderedQueue(worker, [options])
 
-Creates a new ordered queue with given worker and concurrency.
+Creates a new ordered queue with given worker and concurrency. This inherits from [timequeue](https://github.com/fent/timequeue.js), so it will have all properties, methods, and events from it. Only the `TimeQueue#push()` method is rewritten.
 
 ### OrderedQueue#push(order, args1, arg2, ..., callback)
 
 `order` must be an integer that determines the order of the task. The `callback` is optional, will be called once task finishes if provided. All arguments inbetween will be passed to the worker.
-
-### OrderedQueue#die()
-
-Kills the queue.
-
-
-# Events
-
-### Event: 'error'
-* `Error`
-
-Emitted when there is an error processing a task and a callback isn't given to the `push` method.
-
-### Event: 'full'
-
-Queue is full.
-
-### Event: 'empty'
-
-Queue is empty, with tasks still running.
-
-### Event: 'drain'
-
-Queue is empty and last task has finished.
 
 
 # Install
