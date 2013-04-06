@@ -1,6 +1,6 @@
 # ordered-queue [![Build Status](https://secure.travis-ci.org/fent/ordered-queue.js.png)](http://travis-ci.org/fent/ordered-queue.js)
 
-Queue that runs tasks in order.
+Queue with concurrency that starts tasks in order and runs them in parallel.
 
 
 # Usage
