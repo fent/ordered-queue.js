@@ -2,7 +2,7 @@
   "name": "ordered-queue",
   "description": "Queue with concurrency that starts tasks in order and runs them in parallel.",
   "keywords": ["queue", "order", "concurrency"],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/fent/ordered-queue.js.git"
