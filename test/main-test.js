@@ -7,7 +7,7 @@ describe('Push tasks with order', function() {
   var q = new OrderedQueue(function worker(a, callback) {
     output.push(a);
     setTimeout(callback, Math.floor(Math.random() * 50));
-  }, 3);
+  }, { concurrency: 3 });
 
   it('Worker gets called in desired order', function(done) {
     var expected = [0, 1, 2, 3, 4, 5, 6];
