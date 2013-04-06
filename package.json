@@ -1,6 +1,6 @@
 {
   "name": "ordered-queue",
-  "description": "Queue that runs tasks in order.",
+  "description": "Queue with concurrency that starts tasks in order and runs them in parallel.",
   "keywords": ["queue", "order", "concurrency"],
   "version": "0.1.0",
   "repository": {
