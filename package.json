@@ -1,8 +1,12 @@
 {
   "name": "ordered-queue",
   "description": "Queue with concurrency that starts tasks in order and runs them in parallel.",
-  "keywords": ["queue", "order", "concurrency"],
-  "version": "0.2.0",
+  "keywords": [
+    "queue",
+    "order",
+    "concurrency"
+  ],
+  "version": "0.2.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/fent/ordered-queue.js.git"
@@ -19,8 +23,10 @@
   "devDependencies": {
     "mocha": "*"
   },
-  "licenses": [ {
-    "type": "MIT",
-    "url" : "http://github.com/fent/ordered-queue.js/raw/master/LICENSE"
-  }]
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/fent/ordered-queue.js/raw/master/LICENSE"
+    }
+  ]
 }
