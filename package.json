@@ -13,7 +13,7 @@
     "test": "mocha -R spec test/*-test.js"
   },
   "dependencies": {
-    "ordered-emitter": "~0.1.0",
+    "ordered-emitter": "~1.0.0",
     "timequeue": "~0.2.1"
   },
   "devDependencies": {
