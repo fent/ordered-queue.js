@@ -14,13 +14,14 @@
   "author": "fent (https://github.com/fent)",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha -R spec test/*-test.js"
+    "test": "istanbul cover node_modules/.bin/_mocha test/*-test.js"
   },
   "dependencies": {
     "ordered-emitter": "~1.0.0",
     "timequeue": "~0.2.1"
   },
   "devDependencies": {
+    "istanbul": "*",
     "mocha": "*"
   },
   "licenses": [
