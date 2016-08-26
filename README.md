@@ -2,7 +2,9 @@
 
 Queue with concurrency that starts tasks in order and runs them in parallel.
 
-[![Build Status](https://secure.travis-ci.org/fent/ordered-queue.js.png)](http://travis-ci.org/fent/ordered-queue.js) [![Dependency Status](https://gemnasium.com/fent/ordered-queue.js.svg)](https://gemnasium.com/fent/ordered-queue.js)
+[![Build Status](https://secure.travis-ci.org/fent/ordered-queue.js.png)](http://travis-ci.org/fent/ordered-queue.js)
+[![Dependency Status](https://gemnasium.com/fent/ordered-queue.js.svg)](https://gemnasium.com/fent/ordered-queue.js)
+[![codecov](https://codecov.io/gh/fent/ordered-queue.js/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/ordered-queue.js)
 
 # Usage
 
