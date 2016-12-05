@@ -24,10 +24,5 @@
     "istanbul": "*",
     "mocha": "*"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/fent/ordered-queue.js/raw/master/LICENSE"
-    }
-  ]
+  "license": "MIT"
 }
