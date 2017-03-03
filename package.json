@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "ordered-emitter": "~1.0.0",
-    "timequeue": "~0.2.1"
+    "timequeue": "~1.0.0"
   },
   "devDependencies": {
     "istanbul": "*",
