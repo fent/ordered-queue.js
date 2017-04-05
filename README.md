@@ -47,7 +47,7 @@ Creates a new ordered queue with given worker and concurrency. This inherits fro
 
 
 # Tests
-Tests are written with [mocha](http://visionmedia.github.com/mocha/)
+Tests are written with [mocha](https://mochajs.org)
 
 ```bash
 npm test
