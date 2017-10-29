@@ -1,13 +1,22 @@
-const OrderedQueue    = require('..');
-const assert = require('assert');
+const OrderedQueue = require('..');
+const assert       = require('assert');
+const sinon        = require('sinon');
 
+
+var clock;
+before(() => { clock = sinon.useFakeTimers(); });
+after(() => { clock.restore(); });
 
 function createTest(fn, expected) {
   return (done) => {
     var output = [];
     var q = new OrderedQueue((a, callback) => {
       output.push(a);
-      setTimeout(callback, Math.floor(Math.random() * 50));
+      var time = Math.floor(Math.random() * 50);
+      setTimeout(callback, time);
+      process.nextTick(() => {
+        clock.tick(time);
+      });
     }, { concurrency: 3 });
 
     q.on('drain', () => {
