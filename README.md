@@ -9,8 +9,8 @@ Queue with concurrency that starts tasks in order and runs them in parallel.
 # Usage
 
 ```js
-var OrderedQueue = require('ordered-queue');
-var q = new OrderedQueue(function worker(str, callback) {
+const OrderedQueue = require('ordered-queue');
+const q = new OrderedQueue((str, callback) => {
   console.log(str);
   callback();
 }, { concurrency: 10 });

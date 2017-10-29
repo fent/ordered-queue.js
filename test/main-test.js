@@ -1,16 +1,16 @@
-var OrderedQueue    = require('..');
-var assert = require('assert');
+const OrderedQueue    = require('..');
+const assert = require('assert');
 
 
 function createTest(fn, expected) {
-  return function(done) {
+  return (done) => {
     var output = [];
-    var q = new OrderedQueue(function worker(a, callback) {
+    var q = new OrderedQueue((a, callback) => {
       output.push(a);
       setTimeout(callback, Math.floor(Math.random() * 50));
     }, { concurrency: 3 });
 
-    q.on('drain', function() {
+    q.on('drain', () => {
       assert.deepEqual(output, expected);
       done();
     });
@@ -19,9 +19,9 @@ function createTest(fn, expected) {
   };
 }
 
-describe('Push tasks with order', function() {
+describe('Push tasks with order', () => {
 
-  it('Worker gets called in desired order', createTest(function(q) {
+  it('Worker gets called in desired order', createTest((q) => {
     q.push(4, 4);
     q.push(3, 3);
     q.push(2, 2);
@@ -31,8 +31,8 @@ describe('Push tasks with order', function() {
     q.push(5, 5);
   }, [0, 1, 2, 3, 4, 5, 6]));
 
-  describe('Reset in the middle', function() {
-    it('Worker gets called correctly', createTest(function(q) {
+  describe('Reset in the middle', () => {
+    it('Worker gets called correctly', createTest((q) => {
       q.push(2, 2);
       q.push(2, 2);
       q.push(1, 1);
