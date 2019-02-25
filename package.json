@@ -20,8 +20,8 @@
     "test": "istanbul cover node_modules/.bin/_mocha -- test/*-test.js"
   },
   "dependencies": {
-    "ordered-emitter": "~1.0.0",
-    "timequeue": "~1.1.0"
+    "ordered-emitter": "^1.0.0",
+    "timequeue": "^1.2.0"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
