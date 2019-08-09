@@ -3,16 +3,16 @@ const assert       = require('assert');
 const sinon        = require('sinon');
 
 
-var clock;
+let clock;
 before(() => { clock = sinon.useFakeTimers(); });
 after(() => { clock.restore(); });
 
-function createTest(fn, expected) {
+const createTest = (fn, expected) => {
   return (done) => {
-    var output = [];
-    var q = new OrderedQueue((a, callback) => {
+    let output = [];
+    let q = new OrderedQueue((a, callback) => {
       output.push(a);
-      var time = Math.floor(Math.random() * 50);
+      let time = Math.floor(Math.random() * 50);
       setTimeout(callback, time);
       process.nextTick(() => {
         clock.tick(time);
@@ -26,7 +26,7 @@ function createTest(fn, expected) {
     q.on('error', done);
     fn(q);
   };
-}
+};
 
 describe('Push tasks with order', () => {
 
