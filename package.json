@@ -17,7 +17,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "nyc mocha test/*-test.js"
+    "test": "nyc --reporter=lcov --reporter=text-summary mocha test/*-test.js"
   },
   "dependencies": {
     "ordered-emitter": "^1.0.0",
