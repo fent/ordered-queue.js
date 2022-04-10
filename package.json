@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "ordered-emitter": "^1.0.0",
-    "timequeue": "^3.0.1"
+    "timequeue": "^4.0.0"
   },
   "devDependencies": {
     "mocha": "^9.1.4",
