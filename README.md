@@ -2,7 +2,8 @@
 
 Queue with concurrency that starts tasks in order and runs them in parallel.
 
-![Depfu](https://img.shields.io/depfu/fent/ordered-queue.js)
+[![npm](https://img.shields.io/npm/v/ordered-queue)](https://www.npmjs.com/package/ordered-queue)
+[![Node.js CI](https://github.com/fent/ordered-queue.js/actions/workflows/nodejs.yml/badge.svg)](https://github.com/fent/ordered-queue.js/actions/workflows/nodejs.yml)
 [![codecov](https://codecov.io/gh/fent/ordered-queue.js/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/ordered-queue.js)
 
 # Usage
