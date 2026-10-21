@@ -1,5 +1,8 @@
 # ordered-queue.js
 
+> [!WARNING]
+> This project is no longer maintained and has been archived.
+
 Queue with concurrency that starts tasks in order and runs them in parallel.
 
 [![npm](https://img.shields.io/npm/v/ordered-queue)](https://www.npmjs.com/package/ordered-queue)
